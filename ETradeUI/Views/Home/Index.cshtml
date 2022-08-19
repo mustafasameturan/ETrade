@@ -1,0 +1,48 @@
+﻿@using Entities.DTOs
+@model List<ProductDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="row">
+    <div class="container">
+        <div class="col-md-12">
+            <br />
+            <h3 class="text-center">@ViewBag.Role</h3>
+            <br />
+            <br />
+            <table class="table table-success table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Ürün Adı</th>
+                        <th scope="col">Marka</th>
+                        <th scope="col">Kategori</th>
+                        <th scope="col">Renk</th>
+                        <th scope="col">Boyut</th>
+                        <th scope="col">Stok Bilgisi</th>
+                        <th scope="col">Fiyat</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <th scope="row">@item.Id</th>
+                            <td>@item.ProductName</td>
+                            <td>@item.BrandName</td>
+                            <td>@item.CategoryName</td>
+                            <td>@item.ColorName</td>
+                            <td>@item.Size</td>
+                            <td>@item.UnitsInStock</td>
+                            <td>@item.UnitPrice ₺</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
