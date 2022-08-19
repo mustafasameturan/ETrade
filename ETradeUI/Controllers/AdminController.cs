@@ -11,7 +11,7 @@ namespace ETradeUI.Controllers
             return View();
         }
 
-        //sysadmin - Sysadmin034.
-        //admin - Admin034.
+        //sysadmin@gmail.com - Mistik034.
+        //admin@gmail.com - Admin034.
     }
 }
